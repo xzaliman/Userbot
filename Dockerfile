@@ -1,8 +1,8 @@
-# LORD USERBOT
-FROM koala21/kampangbot:buster
+#
+FROM xzaliman/userbot:booster
 
 #
-# LORD
+#
 #
 RUN git clone -b xzaliman https://github.com/xzaliman/xzaliman-userbot /root/userbot
 RUN mkdir /root/userbot/.bin
