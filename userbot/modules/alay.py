@@ -6,7 +6,7 @@ from userbot.events import register
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 # ============================================
 
-
+#salam
 @register(outgoing=True, pattern='^p(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
@@ -15,7 +15,7 @@ async def typewriter(typew):
     sleep(2)
     await typew.edit("`Assalamu'alaikum.....`")
 
-
+#salam
 @register(outgoing=True, pattern='^L(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
@@ -24,7 +24,7 @@ async def typewriter(typew):
     sleep(1)
     await typew.edit("`Wa'alaikumussalam......`")
 
-
+#salam
 @register(outgoing=True, pattern='^l(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
@@ -33,31 +33,31 @@ async def typewriter(typew):
     sleep(1)
     await typew.edit("`Wa'alaikumussalam.....`")
 
-
+#salam
 @register(outgoing=True, pattern='^.P(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("Assalamu'alaikum")
 
-
+#salam
 @register(outgoing=True, pattern='^.p(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("Assalamu'alaikum")
 
-
+#salam
 @register(outgoing=True, pattern='^.L(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("Wa'alaikumussalam")
 
-
+#salam
 @register(outgoing=True, pattern='^.l(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("Wa'alaikumussalam")
 
-
+#by bye
 CMD_HELP.update({
     "salam":
     "`.P`\
