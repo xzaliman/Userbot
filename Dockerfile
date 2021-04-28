@@ -1,9 +1,6 @@
 #
 FROM xzaliman/userbot:booster
 
-#
-#
-#
 RUN git clone -b xzaliman https://github.com/xzaliman-userbot/userbot /root/userbot
 RUN mkdir /root/userbot/.bin
 RUN pip install --upgrade pip setuptools
