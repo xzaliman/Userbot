@@ -1,6 +1,9 @@
-#
-FROM xzaliman/userbot:booster
+# LORD USERBOT
+FROM koala21/kampangbot:buster
 
+#
+# LORD
+#
 RUN git clone -b xzaliman https://github.com/xzaliman-userbot/userbot /root/userbot
 RUN mkdir /root/userbot/.bin
 RUN pip install --upgrade pip setuptools
