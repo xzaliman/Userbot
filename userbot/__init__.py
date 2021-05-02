@@ -427,7 +427,7 @@ with bot:
                                 "https://github.com/xzaliman/xzaliman-userbot"),
                             custom.Button.url(
                                 "Pemilik Repo",
-                                "t.me/xz5pd)],
+                                "t.me/liualvinas)],
                     ],
                     link_preview=False,
                 )
