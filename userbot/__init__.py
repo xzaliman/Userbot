@@ -180,7 +180,7 @@ S_PACK_NAME = os.environ.get("S_PACK_NAME", None)
 
 # Default .alive logo
 ALIVE_LOGO = os.environ.get(
-    "ALIVE_LOGO") or "https://telegra.ph/file/62dc59b2013a48f9cc8f3.jpg"
+    "ALIVE_LOGO") or "https://telegra.ph/file/4497797c08327a4e24dc3.jpg"
 
 # Last.fm Module
 BIO_PREFIX = os.environ.get("BIO_PREFIX", None)
@@ -390,7 +390,7 @@ with bot:
         @tgbot.on(events.NewMessage(pattern="/start"))
         async def handler(event):
             if event.message.from_id != uid:
-                await event.reply("Lord-Userbot, Buat Userbot Mu Sendiri [Tekan Disini](https://github.com/Zora24/Lord-Userbot.git)")
+                await event.reply("Lord-Userbot, Buat Userbot Mu Sendiri [Tekan Disini](https://github.com/xzaliman/xzaliman-userbot.git)")
             else:
                 await event.reply(f"`Hai Lord {ALIVE_NAME}\n\nApa Kabarmu?`")
 
@@ -424,10 +424,10 @@ with bot:
                         [
                             custom.Button.url(
                                 "Repo Lord-Userbot",
-                                "https://github.com/Zora24/Lord-Userbot"),
+                                "https://github.com/xzaliman/xzaliman-userbot"),
                             custom.Button.url(
                                 "Pemilik Repo",
-                                "t.me/liualvinas")],
+                                "t.me/xz5pd")],
                     ],
                     link_preview=False,
                 )
