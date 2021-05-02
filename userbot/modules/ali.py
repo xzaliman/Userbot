@@ -8,7 +8,8 @@ import asyncio
 @register(outgoing=True, pattern="^.sayang$")
 async def koc(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
-        await e.edit("I LOVEE YOUUU 💕")
+        await e.edit("I LOVEE YOU
+                     💕")
         await e.edit("💝💘💓💗")
         await e.edit("💞💕💗💘")
         await e.edit("💝💘💓💗")
@@ -27,11 +28,11 @@ async def koc(e):
         await e.edit("KAMU")
         await e.edit("SAYANG")
         await e.edit("KAMU")
-        await e.edit("I LOVE YOUUUU")
+        await e.edit("I LOVE YOU")
         await e.edit("MY BABY")
         await e.edit("💕💞💘💝")
         await e.edit("💘💕💞💝")
-        await e.edit("SAYANG KAMU💞")
+        await e.edit("SAYANG KAMU 💞")
 
 
 @register(outgoing=True, pattern='^.dino(?: |$)(.*)')
@@ -421,15 +422,15 @@ async def typewriter(typew):
     sleep(1)
     await typew.edit("`I WANT TO BE YOUR BOYFRIEND!`")
     sleep(1)
-    await typew.edit("`I LOVEE YOUUUU💕💗`")
+    await typew.edit("`I LOVEE YOU 💕💗`")
     sleep(1)
-    await typew.edit("`I LOVEE YOUUUU💗💞`")
+    await typew.edit("`I LOVEE YOU 💗💞`")
     sleep(1)
-    await typew.edit("`I LOVEE YOUUUU💝💗`")
+    await typew.edit("`I LOVEE YOU 💝💗`")
     sleep(1)
-    await typew.edit("`I LOVEE YOUUUU💟💖`")
+    await typew.edit("`I LOVEE YOU 💟💖`")
     sleep(1)
-    await typew.edit("`I LOVEE YOUUUU💘💓`")
+    await typew.edit("`I LOVEE YOU 💘💓`")
     sleep(1)
     await typew.edit("`Tapi Bo'ong`")
 # Create by myself @localheart
