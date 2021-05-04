@@ -238,10 +238,10 @@ async def amireallyalive(alive):
         f"**♛ ᴜsᴇʀɴᴀᴍᴇ** \n"
         f" ➥ `@{user.username}` \n"
         f"┏━━━━━━━━━━━━━━━━━━━\n"
-        f"┣[• `Telethon :`Ver {version.__version__} \n"
-        f"┣[• `Python   :`Ver {python_version()} \n"
-        f"┣[• `Bot Ver  :`{BOT_VER} \n"
-        f"┣[• `Modules  :`{len(modules)} Modules \n"
+        f"┣[• `Telethon : `Ver {version.__version__} \n"
+        f"┣[• `Python   : `Ver {python_version()} \n"
+        f"┣[• `Bot Ver  : `{BOT_VER} \n"
+        f"┣[• `Modules  : `{len(modules)} Modules \n"
         f"┗━━━━━━━━━━━━━━━━━━━")
     if ALIVE_LOGO:
         try:
@@ -307,13 +307,13 @@ async def amireallyalive(alive):
     output = (
         f"**♕ LORD USERBOT ♕** \n\n"
         f"┏━━━━━━━━━━━━━━━━━━━ \n"
-        f"┣|• `Lord     :`{DEFAULTUSER} \n"
-        f"┣|• `Username :`@{user.username} \n"
-        f"┣|• `Telethon :`Ver {version.__version__} \n"
-        f"┣|• `Python   :`Ver {python_version()} \n"
-        f"┣|• `Branch   :`{UPSTREAM_REPO_BRANCH} \n"
-        f"┣|• `Bot Ver  :`{BOT_VER} \n"
-        f"┣|• `Modules  :`{len(modules)} Modules \n"
+        f"┣|• `Lord     : `{DEFAULTUSER} \n"
+        f"┣|• `Username : `@{user.username} \n"
+        f"┣|• `Telethon : `Ver {version.__version__} \n"
+        f"┣|• `Python   : `Ver {python_version()} \n"
+        f"┣|• `Branch   : `{UPSTREAM_REPO_BRANCH} \n"
+        f"┣|• `Bot Ver  : `{BOT_VER} \n"
+        f"┣|• `Modules  : `{len(modules)} Modules \n"
         f"┗━━━━━━━━━━━━━━━━━━━ \n\n"
         f"[Repo](https://github.com/xzaliman/xzaliman-userbot) | [Grup Support](t.me/GrupCinta) | [Owner](t.me/xz5pd)")
     if ALIVE_LOGO:
