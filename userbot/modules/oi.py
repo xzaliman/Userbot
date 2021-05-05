@@ -10,7 +10,7 @@ async def typewriter(typew):
     sleep(3)
     await typew.edit("`18 Tahun`")
     sleep(1)
-    await typew.edit("`Tinggal Di Bandung, Salam Kenal:)`")
+    await typew.edit("`Tinggal Di Bandung, Salam Kenal 😀`")
 # Create by myself @localheart
 
 
