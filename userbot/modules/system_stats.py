@@ -305,7 +305,7 @@ async def amireallyalive(alive):
     await alive.edit("`I'M ALIVE!`")
     await alive.edit("⚡")
     output = (
-        f"**♕ LORD USERBOT ♕** \n\n"
+        f"**♕ USERBOT ♕** \n\n"
         f"┏━━━━━━━━━━━━━━━━━━━ \n"
         f"┣|• `Master     : `{DEFAULTUSER} \n"
         f"┣|• `Username : `@{user.username} \n"
@@ -315,7 +315,7 @@ async def amireallyalive(alive):
         f"┣|• `Bot Ver  : `{BOT_VER} \n"
         f"┣|• `Modules  : `{len(modules)} Modules \n"
         f"┗━━━━━━━━━━━━━━━━━━━ \n\n"
-        f"[Repo](https://github.com/xzaliman/xzaliman-userbot) | [Grup Support](t.me/GrupCinta) | [Owner](t.me/xz5pd)")
+        f"[Repo Userbot](https://github.com/xzaliman/xzaliman-userbot) | [Grup Support](t.me/GrupCinta) | [Owner](t.me/xz5pd)")
     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
