@@ -119,7 +119,7 @@ async def kick_marie_notes(kick):
     bot_type = kick.pattern_match.group(1).lower()
     if bot_type not in ["marie", "rose"]:
         return await kick.edit("`Bot itu belum didukung!`")
-    await kick.edit("```Akan menendang semua Catatan!```")
+    await kick.edit("```Akan menghapus semua Catatan!```")
     await sleep(3)
     resp = await kick.get_reply_message()
     filters = resp.text.split("-")[1:]
