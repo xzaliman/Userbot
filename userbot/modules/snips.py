@@ -71,7 +71,7 @@ async def on_snip_save(event):
     elif event.reply_to_msg_id and not string:
         rep_msg = await event.get_reply_message()
         string = rep_msg.text
-    success = "`Berhasil memotong {}. Gunakan` **${}** `di mana saja untuk mendapatkannya`"
+    success = "`Berhasil menyimpan {}. Gunakan` **${}** `di mana saja untuk mendapatkannya`"
     if add_snip(keyword, string, msg_id) is False:
         await event.edit(success.format('updated', keyword))
     else:
@@ -122,7 +122,7 @@ $<snip_name>\
 \n\n`.snip` <name> <data> atau membalas pesan dengan .snip <name>\
 \nUsage: Menyimpan pesan sebagai snip (catatan global) dengan nama. (Bekerja dengan foto, dokumen, dan stiker juga!)\
 \n\n`.snips`\
-\nUsage: Mendapat semua potongan yang disimpan.\
+\nUsage: Melihat semua snip yang disimpan.\
 \n\n`.remsnip` <snip_name>\
 \nUsage: Menghapus snip yang ditentukan.\
 "
