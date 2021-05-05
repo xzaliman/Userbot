@@ -34,12 +34,12 @@ LFM_BIO_DISABLED = (
     "```last.fm current music to bio is now disabled. Bio reverted to default.```"
 )
 
-LFM_BIO_RUNNING = "````Lord, last.fm musik saat ini ke bio sudah berjalan.```"
+LFM_BIO_RUNNING = "````last.fm musik saat ini ke bio sudah berjalan.```"
 LFM_BIO_ERR = "```Tidak ada opsi yang ditentukan.``` "
 LFM_LOG_ENABLED = "```last.fm logging ke bot log sekarang diaktifkan.``` "
 LFM_LOG_DISABLED = "```last.fm logging ke bot log sekarang dinonaktifkan.``` "
 LFM_LOG_ERR = "```Tidak ada opsi yang ditentukan.```"
-ERROR_MSG = "```Lord, modul last.fm dihentikan, mendapat kesalahan tak terduga.``` "
+ERROR_MSG = "```modul last.fm dihentikan, mendapat kesalahan tak terduga.``` "
 
 ARTIST = 0
 SONG = 0
