@@ -36,14 +36,14 @@ from userbot.events import register
 # =================== CONSTANT ===================
 PP_TOO_SMOL = "`Gambar Terlalu Kecil`"
 PP_ERROR = "`Gagal Memproses Gambar`"
-NO_ADMIN = "`Lord Bukan Admin:)`"
-NO_PERM = "`Lord Tidak Mempunyai Izin!`"
+NO_ADMIN = "`Saya Bukan Admin:)`"
+NO_PERM = "`Saya Tidak Mempunyai Izin!`"
 NO_SQL = "`Berjalan Pada Mode Non-SQL`"
 
 CHAT_PP_CHANGED = "`Berhasil Mengubah Profil Grup`"
 CHAT_PP_ERROR = (
     "`Ada Masalah Dengan Memperbarui Foto,`"
-    "`Mungkin Karna Lord Bukan Admin,`"
+    "`Mungkin Karna Saya Bukan Admin,`"
     "`Atau Tidak Mempunyai Izin.`"
 )
 INVALID_MEDIA = "`Media Tidak Valid`"
@@ -80,7 +80,7 @@ UNMUTE_RIGHTS = ChatBannedRights(until_date=None, send_messages=False)
 @register(outgoing=True, pattern=r"^\.setgpic$")
 async def set_group_photo(gpic):
     if not gpic.is_group:
-        await gpic.edit("`Lord Mohon Lakukan Perintah Ini Di Grup.`")
+        await gpic.edit("`Mohon Lakukan Perintah Ini Di Grup.`")
         return
     replymsg = await gpic.get_reply_message()
     chat = await gpic.get_chat()
@@ -540,9 +540,9 @@ async def rm_deletedacc(show):
 
     # Well
     if not admin and not creator:
-        return await show.edit("`Lord Bukan Admin Disini!`")
+        return await show.edit("`Saya Bukan Admin Disini!`")
 
-    await show.edit("`Menghapus Akun Terhapus...\nMohon Menunggu Lord Sedang Dalam Proses`")
+    await show.edit("`Menghapus Akun Terhapus...\nMohon Menunggu Saya Sedang Dalam Proses`")
     del_u = 0
     del_a = 0
 
@@ -553,7 +553,7 @@ async def rm_deletedacc(show):
                     EditBannedRequest(show.chat_id, user.id, BANNED_RIGHTS)
                 )
             except ChatAdminRequiredError:
-                return await show.edit("`Lord Tidak Memiliki Izin Banned Dalam Grup Ini`")
+                return await show.edit("`Saya Tidak Memiliki Izin Banned Dalam Grup Ini`")
             except UserAdminInvalidError:
                 del_u -= 1
                 del_a += 1
@@ -585,14 +585,14 @@ async def rm_deletedacc(show):
 async def get_admin(show):
     info = await show.client.get_entity(show.chat_id)
     title = info.title if info.title else "Grup Ini"
-    mentions = f"<b>✥ Daftar Admin Grup {title}:</b> \n"
+    mentions = f"<b>★ Daftar Admin Grup {title}:</b> \n"
     try:
         async for user in show.client.iter_participants(
             show.chat_id, filter=ChannelParticipantsAdmins
         ):
             if not user.deleted:
                 link = f'<a href="tg://user?id={user.id}">{user.first_name}</a>'
-                mentions += f"\n➤ {link}"
+                mentions += f"\n★ {link}"
             else:
                 mentions += f"\nAkun Terhapus <code>{user.id}</code>"
     except ChatAdminRequiredError as err:
@@ -715,7 +715,7 @@ async def get_users(show):
     try:
         await show.edit(mentions)
     except MessageTooLongError:
-        await show.edit("Lord, Grup Ini Terlalu Besar Mengunggah Daftar Pengguna Sebagai File.")
+        await show.edit("Grup Ini Terlalu Besar Mengunggah Daftar Pengguna Sebagai File.")
         file = open("daftarpengguna.txt", "w+")
         file.write(mentions)
         file.close()
@@ -806,7 +806,7 @@ async def get_usersdel(show):
         await show.edit(mentions)
     except MessageTooLongError:
         await show.edit(
-            "Lord, Grup Ini Terlalu Besar, Mengunggah Daftar Akun Terhapus Sebagai File."
+            "Grup Ini Terlalu Besar, Mengunggah Daftar Akun Terhapus Sebagai File."
         )
         file = open("daftarpengguna.txt", "w+")
         file.write(mentions)
@@ -890,7 +890,7 @@ async def get_bots(show):
     try:
         await show.edit(mentions, parse_mode="html")
     except MessageTooLongError:
-        await show.edit("Lord, Terlalu Banyak Bot Di Grup Ini, Mengunggah Daftar Bot Sebagai File.")
+        await show.edit("Terlalu Banyak Bot Di Grup Ini, Mengunggah Daftar Bot Sebagai File.")
         file = open("botlist.txt", "w+")
         file.write(mentions)
         file.close()
