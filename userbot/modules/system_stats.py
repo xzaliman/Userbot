@@ -230,7 +230,7 @@ async def amireallyalive(alive):
     await alive.edit("`I'M ALIVE!`")
     await alive.edit("⚡")
     output = (
-        f" **┗┓USERBOT┏┛** \n"
+        f" **★ USERBOT ★** \n"
         f"\n__**{LORD_TEKS_KUSTOM}**__\n"
         f"**━━━━━━━━━━━━━━━━━━━━**\n"
         f"**♛ ʟᴏʀᴅ** \n"
@@ -268,9 +268,9 @@ async def amireallyalive(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
     output = (
-        f"**▬▬▬▬▬▬❙۩♛۩❙▬▬▬▬▬▬**\n"
-        f"     **♕ USERBOT ♕** \n\n"
-        f"❃ **Master**     \n   ➥ `{DEFAULTUSER}` \n"
+        f"**▬▬▬▬▬▬❙۩★۩❙▬▬▬▬▬▬**\n"
+        f"     **★ USERBOT ★** \n\n"
+        f"❃ **My Master**     \n   ➥ `{DEFAULTUSER}` \n"
         f"❃ **Username** \n   ➥ `@{user.username}` \n"
         f"❃ **Telethon** \n   ➥ `Versi {version.__version__}` \n"
         f"❃ **Python**   \n   ➥ `Versi {python_version()}` \n"
@@ -305,9 +305,9 @@ async def amireallyalive(alive):
     await alive.edit("`I'M ALIVE!`")
     await alive.edit("⚡")
     output = (
-        f"**♕ USERBOT ♕** \n\n"
+        f"**★ USERBOT ★** \n\n"
         f"┏━━━━━━━━━━━━━━━━━━━ \n"
-        f"┣|• `Master     : `{DEFAULTUSER} \n"
+        f"┣|• `My Master     : `{DEFAULTUSER} \n"
         f"┣|• `Username : `@{user.username} \n"
         f"┣|• `Telethon : `Ver {version.__version__} \n"
         f"┣|• `Python   : `Ver {python_version()} \n"
