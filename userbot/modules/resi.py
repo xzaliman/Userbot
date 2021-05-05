@@ -22,7 +22,7 @@ async def _(event):
             await conv.send_message(f'{kurir} {resi}')
             response = await response
         except YouBlockedUserError:
-            await event.reply("Unblock @ GeDebugBetaBot dulu Goblok!!")
+            await event.reply("Unblock @GeDebugBetaBot dulu!!")
             return
         else:
             await event.edit(f"{response.message.message}")
