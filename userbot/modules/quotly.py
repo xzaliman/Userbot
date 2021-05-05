@@ -47,14 +47,14 @@ async def quotess(qotli):
     if qotli.fwd_from:
         return
     if not qotli.reply_to_msg_id:
-        return await qotli.edit("```Mohon Balas Ke Pesan Lord```")
+        return await qotli.edit("```Balas Ke Pesan```")
     reply_message = await qotli.get_reply_message()
     if not reply_message.text:
-        return await qotli.edit("```Mohon Balas Ke Pesan Lord```")
+        return await qotli.edit("```Balas Ke Pesan```")
     chat = "@QuotLyBot"
     if reply_message.sender.bot:
-        return await qotli.edit("```Mohon Balas Ke Pesan Lord```")
-    await qotli.edit("```Sedang Memproses Sticker, Mohon Menunggu ツ```")
+        return await qotli.edit("```Balas Ke Pesan```")
+    await qotli.edit("```Sedang Memproses Sticker, Silahkan Menunggu```")
     try:
         async with bot.conversation(chat) as conv:
             try:
@@ -67,9 +67,9 @@ async def quotess(qotli):
                 """ - don't spam notif - """
                 await bot.send_read_acknowledge(conv.chat_id)
             except YouBlockedUserError:
-                return await qotli.reply("```Harap Jangan Blockir @QuotLyBot Buka Blokir Lalu Coba Lagi```")
+                return await qotli.reply("```Jangan Blockir @QuotLyBot Buka Blokir Lalu Coba Lagi```")
             if response.text.startswith("Hi!"):
-                await qotli.edit("```Mohon Menonaktifkan Pengaturan Privasi Forward Anda```")
+                await qotli.edit("```Nonaktifkan Pengaturan Privasi Forward Anda```")
             else:
                 await qotli.delete()
                 await bot.forward_messages(qotli.chat_id, response.message)
