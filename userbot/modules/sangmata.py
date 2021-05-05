@@ -11,12 +11,12 @@ from userbot.events import register
 from asyncio.exceptions import TimeoutError
 
 
-@register(outgoing=True, pattern=r"^\.sa(?: |$)(.*)")
+@register(outgoing=True, pattern=r"^\.sg(?: |$)(.*)")
 async def lastname(steal):
     if steal.fwd_from:
         return
     if not steal.reply_to_msg_id:
-        await steal.edit("```Mohon Balas Ke Pesan Pengguna Lord.```")
+        await steal.edit("```Balas Ke Pesan Pengguna.```")
         return
     message = await steal.get_reply_message()
     chat = "@SangMataInfo_bot"
@@ -25,7 +25,7 @@ async def lastname(steal):
     if message.sender.bot:
         await steal.edit("```Balas Ke Pesan Pengguna Yang Sebenarnya.```")
         return
-    await steal.edit("```Lord Memerintahku Mengambil Informasi Riwayat Pergantian Nama Orang Ini ツ```")
+    await steal.edit("```Proses Mengambil Informasi Riwayat Pergantian Nama Orang Ini```")
     try:
         async with bot.conversation(chat) as conv:
             try:
@@ -34,7 +34,7 @@ async def lastname(steal):
                 response = await conv.get_response()
             except YouBlockedUserError:
                 await steal.reply(
-                    "```Lord Mohon Unblock @sangmatainfo_bot Dan Coba Lagi```"
+                    "```Unblock @sangmatainfo_bot Dan Coba Lagi```"
                 )
                 return
             if r.text.startswith("Name"):
@@ -47,7 +47,7 @@ async def lastname(steal):
             if response.text.startswith("No records") or r.text.startswith(
                 "No records"
             ):
-                await steal.edit("```Saya Tidak Menemukan Informasi Pergantian Nama, Lord Orang Ini Belum Pernah Mengganti Namanya ツ```")
+                await steal.edit("```Saya Tidak Menemukan Informasi Pergantian Nama, Orang Ini Belum Pernah Mengganti Namanya```")
                 await steal.client.delete_messages(
                     conv.chat_id, [msg.id, r.id, response.id]
                 )
@@ -59,11 +59,11 @@ async def lastname(steal):
                 conv.chat_id, [msg.id, r.id, response.id, respond.id]
             )
     except TimeoutError:
-        return await steal.edit("`Saya Sedang Sakit Lord Maaf`")
+        return await steal.edit("`Saya Sedang Sakit, Maaf`")
 
 
 CMD_HELP.update({
     "sangmata":
-        "`.sa`\
+        "`.sg`\
           \nUsage: Mendapatkan Riwayat Nama Pengguna."
 })
