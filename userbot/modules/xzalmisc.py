@@ -384,7 +384,7 @@ async def _(event):
     thumb = None
     if os.path.exists(thumb_image_path):
         thumb = thumb_image_path
-    await event.edit("`Rename Dan Upload Dalam Proses, Ini Akan Memakan Waktu Lama Jika Ukuran File Besar`")
+    await event.edit("`Rename Dan Upload, Ini Akan Memakan Waktu Lama Jika Ukuran File Besar`")
     input_str = event.pattern_match.group(1)
     if not os.path.isdir(TEMP_DOWNLOAD_DIRECTORY):
         os.makedirs(TEMP_DOWNLOAD_DIRECTORY)
@@ -418,7 +418,7 @@ async def _(event):
         else:
             await event.edit("File Tidak ditemukan{}".format(input_str))
     else:
-        await event.edit("`Mohon Balas Ke Media Lord`")
+        await event.edit("`Mohon Balas Ke Media`")
 
 
 @register(outgoing=True, pattern="^.grab(?: |$)(.*)")
@@ -541,7 +541,7 @@ async def _(event):
     await event.delete()
     await bot.send_message(
         event.chat_id,
-        "`Clone Berhasil Dilakukan ツ`",
+        "`Clone Berhasil Dilakukan`",
         reply_to=reply_message
     )
 
@@ -1024,7 +1024,7 @@ async def _(event):
     await bot(functions.photos.DeletePhotosRequest(await event.client.get_profile_photos("me", limit=n)))
     await bot(functions.account.UpdateProfileRequest(about=bio))
     await bot(functions.account.UpdateProfileRequest(first_name=name))
-    await event.edit("`Berhasil Mengembalikan Akun Anda ツ`")
+    await event.edit("`Berhasil Mengembalikan Akun Anda`")
 
 CMD_HELP.update({
     "misc":
