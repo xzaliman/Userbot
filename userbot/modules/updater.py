@@ -214,12 +214,12 @@ async def upstream(event):
         await event.edit(
             '`Sinkronisasi Paksa Ke Kode Userbot Stabil Terbaru, Harap Tunggu .....`')
     else:
-        await event.edit('`Proses Update Userbot, Loading....1%`')
-        await event.edit('`Proses Update Userbot, Loading....20%`')
-        await event.edit('`Proses Update Userbot, Loading....35%`')
-        await event.edit('`Proses Update Userbot, Loading....77%`')
+        await event.edit('`Proses Update Userbot, Loading...1%`')
+        await event.edit('`Proses Update Userbot, Loading...20%`')
+        await event.edit('`Proses Update Userbot, Loading...35%`')
+        await event.edit('`Proses Update Userbot, Loading...77%`')
         await event.edit('`Proses Update Userbot, Updating...90%`')
-        await event.edit('`Proses Update Userbot, Mohon Menunggu Lord....100%`')
+        await event.edit('`Proses Update Userbot, Mohon Menunggu...100%`')
     if conf == "now":
         await update(event, repo, ups_rem, ac_br)
         await asyncio.sleep(10)
