@@ -30,7 +30,7 @@ async def _(event):
         "name": "DeezLoad",
         "arl_token_cfg_doc": "ARL Token untuk Deezer",
         "invalid_arl_token": "tolong setel variabel yang dibutuhkan untuk modul ini",
-        "wrong_cmd_syntax": "bruh, sekarang saya pikir seberapa jauh kita harus melangkah. tolong hentikan Sesi saya!",
+        "wrong_cmd_syntax": "master, sekarang saya pikir seberapa jauh kita harus melangkah. tolong hentikan Sesi saya!",
         "server_error": "Terjadi kesalahan teknis.",
         "processing": "`Sedang Mendownload..`",
         "uploading": "`Sedang Mengunggah...`",
