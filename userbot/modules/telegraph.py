@@ -85,7 +85,7 @@ async def telegraphs(graph):
                     link_preview=True,
                 )
         else:
-            await graph.edit("`Mohon Balas Ke Pesan, Untuk Mendapatkan Link Telegraph Permanen.`")
+            await graph.edit("`Balas Ke Pesan, Untuk Mendapatkan Link Telegraph.`")
 
 
 def resize_image(image):
