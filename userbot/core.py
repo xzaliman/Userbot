@@ -13,9 +13,9 @@ async def install(event):
         return
     if event.reply_to_msg_id:
         try:
-            downloaded_file_name = await event.client.download_media(
+            downloaded_file_name = await event.client.download_media(  # pylint:disable=E0602
                 await event.get_reply_message(),
-                "userbot/modules/"
+                "userbot/modules/" # pylint:disable=E0602
             )
             if "(" not in downloaded_file_name:
                 path1 = Path(downloaded_file_name)
@@ -25,7 +25,7 @@ async def install(event):
             else:
                 os.remove(downloaded_file_name)
                 await event.edit("Errors! This plugin is already installed/pre-installed.")
-        except Exception as e:
+        except Exception as e:  # pylint:disable=C0103,W0703
             await event.edit(str(e))
             os.remove(downloaded_file_name)
     await asyncio.sleep(DELETE_TIMEOUT)
@@ -40,7 +40,7 @@ async def send(event):
     input_str = event.pattern_match["shortname"]
     the_plugin_file = "./userbot/modules/{}.py".format(input_str)
     start = datetime.now()
-    await event.client.send_file(
+    await event.client.send_file(  # pylint:disable=E0602
         event.chat_id,
         the_plugin_file,
         force_document=True,
