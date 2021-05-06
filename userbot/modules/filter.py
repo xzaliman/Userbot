@@ -97,9 +97,9 @@ async def remove_a_filter(r_handler):
             "`Berhasil Menghapus Filter` **{}** `Disini`.".format(filt))
 
 
-@register(outgoing=True, pattern="^.bersihkanbotfilter (.*)")
+@register(outgoing=True, pattern="^.rmfilters (.*)")
 async def kick_marie_filter(event):
-    """ For .bersihkanbotfilter command, allows you to kick all \
+    """ For .rmfilters command, allows you to kick all \
         Marie(or her clones) filters from a chat. """
     bot_type = event.pattern_match.group(1).lower()
     if bot_type not in ["marie", "rose"]:
@@ -152,6 +152,6 @@ CMD_HELP.update({
     \nBisa dipake ke media/sticker/vn/file.\
     \n\n`.stop` <keyword>\
     \nPenjelasan: Untuk Nonaktifkan Filter.\
-    \n\n`.bersihkanbotfilter` <rose>\
+    \n\n`.rmfilters` <rose>\
     \nPenjelasan: Menghapus semua filter yang ada di bot grup (Saat ini bot yang didukung: Rose.) dalam obrolan."
 })
