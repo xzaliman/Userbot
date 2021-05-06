@@ -24,14 +24,10 @@ async def help(event):
             await asyncio.sleep(200)
             await event.delete()
     else:
-        await event.edit("⚡")
         string = ""
         for i in CMD_HELP:
             string += "`" + str(i)
             string += "`\t  "
-        await event.edit("**★ Daftar Perintah Untuk\nUserbot:\n\n**"
+        await event.edit("**★ Daftar Perintah Untuk {ALIVE_NAME} Userbot:\n\n**"
                          f"{string}"
                          "\n")
-        await event.reply(f"\n**Ketik Contoh** `.help afk` **Untuk Informasi Perintah**")
-        await asyncio.sleep(1000)
-        await event.delete()
