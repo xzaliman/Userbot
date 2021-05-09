@@ -148,8 +148,8 @@ async def ANTI_SPAMBOTS(welcm):
                             "PENGGUNA INI SESUAI DENGAN ALGORITMA SAYA SEBAGAI SPAMBOT!`"
                             f"ALASAN: {reason}"
                         )
-                        kicked = False
-                        reported = True
+                        kicked = True
+                        reported = False
                 else:
                     try:
 
@@ -174,8 +174,8 @@ async def ANTI_SPAMBOTS(welcm):
                                 "PENGGUNA INI SESUAI DENGAN ALGORITMA SAYA SEBAGAI SPAMBOT!`"
                                 f"ALASAN  : {reason}"
                             )
-                            kicked = False
-                            reported = True
+                            kicked = True
+                            reported = False
 
                 if BOTLOG:
                     if kicked or reported:
