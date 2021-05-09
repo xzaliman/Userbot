@@ -154,9 +154,9 @@ async def ANTI_SPAMBOTS(welcm):
                     try:
 
                         await welcm.reply(
-                            "`Potensi Spambot Terdeteksi.!!`\n"
+                            "`Spamer Terdeteksi!`\n"
                             f"`ALASAN   :` {reason}\n"
-                            "Mengeluarkan dia untuk saat ini.\n"
+                            "Saya Mengeluarkan Dia Dari Grup.\n"
                             f"`PENGGUNA :` [{check_user.first_name}](tg://user?id={check_user.id})"
                         )
 
